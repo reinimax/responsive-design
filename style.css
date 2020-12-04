@@ -38,15 +38,39 @@ body * {
   background-color: white;
 }
 
+/* Big News section*/
 .news-big {
   grid-auto-rows: 240px;
 }
 
-.news-big > article {
-  background-color: blue;
-  cursor: pointer;
+.lead-article {
+  background-image: url("assets/images/news-big1.jpg");
 }
 
+.news-big > article:nth-child(2) {
+  background-image: url("assets/images/news-big2.png");
+}
+
+.news-big > article:nth-child(3) {
+  background-image: url("assets/images/news-big3.jpg");
+}
+
+.news-big > article {
+  cursor: pointer;
+  background-position: center;
+  background-size: cover;
+}
+
+.news-big > article > header {
+  height: 100%;
+  background-image: linear-gradient(
+    rgba(124, 124, 124, 0.6),
+    rgba(15, 15, 15, 0.8) 80%,
+    rgba(5, 5, 5, 1)
+  );
+}
+
+/* Latest news */
 .news-latest > article {
   height: 100px;
   background-color: green;
