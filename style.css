@@ -1,0 +1,108 @@
+body {
+  background-color: rgb(212, 212, 212);
+}
+
+/* Basic grid-layout for the main sections */
+.news-big,
+.news-latest,
+.funding,
+.news-categories,
+.deals {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 10px;
+}
+
+.news-latest,
+.funding,
+.news-categories,
+.deals {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Preliminary styling for testing out positioning */
+.site-header {
+  height: 20px;
+  background-color: black;
+}
+
+.navbar {
+  height: 40px;
+  background-color: white;
+}
+
+.news-big > article {
+  height: 150px;
+  background-color: blue;
+}
+
+.news-latest > article {
+  height: 100px;
+  background-color: green;
+}
+
+.funding > article {
+  height: 100px;
+  background-color: yellow;
+}
+
+.news-categories > article {
+  height: 300px;
+  background-color: red;
+}
+
+.deals > article {
+  height: 100px;
+  background-color: mediumaquamarine;
+}
+
+.footer1 {
+  height: 150px;
+  background-color: rgb(63, 63, 63);
+}
+
+.footer2 {
+  height: 100px;
+  background-color: black;
+}
+
+/* First breakpoint @768px */
+@media (min-width: 768px) {
+  .news-big,
+  .news-latest,
+  .funding,
+  .deals {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .lead-article {
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 2;
+  }
+
+  .news-latest h2,
+  .funding h2,
+  .deals h2 {
+    grid-column: 1 / -1;
+  }
+
+  .news-categories {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Second breakpoint @1024px */
+@media (min-width: 1024px) {
+  .news-latest,
+  .funding,
+  .deals {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .news-categories {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
