@@ -368,6 +368,33 @@ h2 > a:hover {
     padding-bottom: 56.25%;
     position: relative;
   }
+
+  /* Funding section */
+  .funding > header {
+    grid-column: 1 / -1;
+  }
+
+  .funding h2 {
+    margin-bottom: 0;
+  }
+
+  .funding-links > a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 16px;
+  }
+
+  .funding-links > a:first-child::after,
+  .funding-links > a:nth-child(2)::after {
+    content: "|";
+    font-size: 1.1em;
+    margin-left: 10px;
+  }
+
+  .funding-links > a:first-child:hover::after,
+  .funding-links > a:nth-child(2):hover::after {
+    color: black;
+  }
 }
 
 /* Special case: portrait (if height >= width) */
@@ -391,5 +418,20 @@ h2 > a:hover {
 
   .news-categories {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .funding > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .funding h2 {
+    margin-bottom: 10px;
+  }
+
+  .funding h3 {
+    font-size: 17px;
+    font-weight: 700;
   }
 }
