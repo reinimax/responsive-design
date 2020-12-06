@@ -219,7 +219,7 @@ h2 > a:hover {
 }
 
 .funding > article > header {
-  background-color: rgba(255,68,34,.08);
+  background-color: rgba(255, 68, 34, 0.08);
   position: relative;
   cursor: pointer;
 }
@@ -258,7 +258,7 @@ h2 > a:hover {
 
 .funding-wrapper {
   padding: 1rem;
-  border-bottom: 1px solid rgba(255,68,34,0.25);
+  border-bottom: 1px solid rgba(255, 68, 34, 0.25);
 }
 
 .funding-wrapper img {
@@ -346,29 +346,29 @@ h2 > a:hover {
     align-content: flex-start;
   }
 
-/* 
+  /* 
   Using the "padding-bottom hack" to ensure all the images 
   in the latest news section have the same aspect ratio.
   See: https://www.smashingmagazine.com/2013/09/responsive-images-performance-problem-case-study/
 */
-.news-latest img {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+  .news-latest img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
-.image-wrapper {
-  width: 100%;
-  height: 0;
-  flex: 0 0 auto;
-  margin-right: 0;
-  margin-bottom: 5px;
-  padding-bottom: 56.25%;
-  position: relative;
+  .image-wrapper {
+    width: 100%;
+    height: 0;
+    flex: 0 0 auto;
+    margin-right: 0;
+    margin-bottom: 5px;
+    padding-bottom: 56.25%;
+    position: relative;
+  }
 }
-
 
 /* Special case: portrait (if height >= width) */
 @media (min-width: 768px) and (orientation: portrait) {
