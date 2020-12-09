@@ -292,11 +292,178 @@ h2 > a:hover {
 }
 
 /* News by category */
-.news-categories > article {
-  height: 300px;
-  background-color: red;
+.news-categories {
+  padding: 20px;
 }
 
+.news-categories h2 {
+  margin-bottom: 10px;
+}
+
+.news-categories .most-popular {
+  padding-bottom: 75%;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.hard-fork .most-popular {
+  background-image: url("assets/images/cat1a.jpg");
+}
+
+.apps .most-popular {
+  background-image: url("assets/images/cat2a.jpg");
+}
+
+.gear .most-popular {
+  background-image: url("assets/images/cat3a.webp");
+}
+
+.tech .most-popular {
+  background-image: url("assets/images/cat4a.jpg");
+}
+
+.creative .most-popular {
+  background-image: url("assets/images/cat5a.jpg");
+}
+
+.podium .most-popular {
+  background-image: url("assets/images/cat6a.png");
+}
+
+.insights .most-popular {
+  background-image: url("assets/images/cat7a.jpg");
+}
+
+.launch .most-popular {
+  background-image: url("assets/images/cat8a.jpg");
+}
+
+.distract .most-popular {
+  background-image: url("assets/images/cat9a.jpg");
+}
+
+.news-categories .most-popular header {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: linear-gradient(
+    rgba(5, 5, 5, 0.1),
+    rgba(5, 5, 5, 0.6) 70%,
+    rgba(5, 5, 5, 0.9) 80%,
+    rgba(5, 5, 5, 1)
+  );
+  padding-left: 20px;
+  padding-bottom: 15px;
+}
+
+.news-categories .most-popular p {
+  cursor: auto;
+}
+
+.most-popular .category {
+  font-size: 13px;
+}
+
+.news-categories .most-popular h3 {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.3em;
+}
+
+.news-categories .most-popular h3 a:hover {
+  text-decoration: underline rgba(170, 170, 170, 0.5);
+  text-underline-offset: 5px;
+}
+
+.most-popular .text-secondary a:hover {
+  color: white;
+}
+
+.most-popular time:before {
+  content: "\B7";
+  display: inline-block;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.news-categories .latest {
+  margin-top: 2px;
+  background-color: rgba(255, 68, 34, 0.08);
+  color: var(--orange);
+}
+
+.news-categories .latest img {
+  object-fit: cover;
+}
+
+.news-categories .latest p {
+  padding-left: 20px;
+  padding-top: 10px;
+  font-size: 13px;
+}
+
+.news-categories .latest:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: right;
+}
+
+.news-categories .latest h3 {
+  font-weight: 600;
+  padding-left: 20px;
+}
+
+.news-categories .latest h3 a:hover {
+  text-decoration: underline rgba(255, 68, 34, 0.15);
+  text-underline-offset: 3px;
+}
+
+.news-categories .latest img {
+  float: right;
+}
+
+.news-categories .latest img:hover {
+  cursor: pointer;
+}
+
+.further-articles li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 12px;
+  color: rgb(85, 85, 85);
+  border-bottom: 1px solid rgba(170, 170, 170, 0.2);
+}
+
+.further-articles a:before {
+  content: "";
+  display: inline-block;
+  margin-right: 14px;
+  margin-top: 0.5em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--orange);
+}
+
+.further-articles li a {
+  display: flex;
+}
+
+.further-articles li a:hover {
+  color: black;
+}
+
+/* Deals */
 .deals > article {
   height: 100px;
   background-color: mediumaquamarine;
@@ -339,6 +506,8 @@ h2 > a:hover {
 
   .news-categories {
     grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+    column-gap: 25px;
   }
 
   .news-latest article {
