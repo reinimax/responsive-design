@@ -62,14 +62,27 @@ h2 > a:hover {
   margin-right: auto;
 }
 
-/* Preliminary styling for testing out positioning */
+/* Header */
 .site-header {
-  height: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  display: grid;
+}
+
+.site-logo,
+.navbar-top {
+  display: none;
+}
+
+.navbar-top {
+  height: 32px;
   background-color: black;
 }
 
-.navbar {
-  height: 40px;
+.navbar-main {
+  height: 48px;
   background-color: white;
 }
 
@@ -592,6 +605,25 @@ h2 > a:hover {
 
 /* First breakpoint @768px */
 @media (min-width: 768px) {
+  .site-header {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .site-logo,
+  .navbar-top {
+    display: flex;
+  }
+
+  .site-logo {
+    grid-row: 1 / -1;
+    background-color: black;
+    align-items: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: 900;
+  }
+
   .news-big,
   .news-latest,
   .funding,
@@ -724,6 +756,15 @@ h2 > a:hover {
 
 /* Second breakpoint @1024px */
 @media (min-width: 1024px) {
+  .site-header {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .site-logo {
+    display: none;
+  }
+
   .news-latest,
   .funding,
   .deals {
