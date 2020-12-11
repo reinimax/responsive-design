@@ -9,7 +9,9 @@
   </head>
   <body>
     <header class="site-header">
-      <div class="logo-mockup site-logo">TNW</div>
+      <div class="logo-mockup site-logo">
+        <div class="logo-text">TNW</div>
+      </div>
       <nav class="navbar-top">
         <div>
           <a class="link-highlight" href="#">News</a>
@@ -1219,23 +1221,28 @@
       </div>
     </footer>
     <script>
-      const header = document.querySelector(".site-header");
       const logo = document.querySelector(".site-logo");
-      const logoStandard = document.querySelector(".logo-standard");
-      const logoPopdown = document.querySelector(".logo-popdown");
-      const nav = document.querySelector(".navbar-top");
+      const logoText = document.querySelector(".logo-text");
+      const navTop = document.querySelector(".navbar-top");
+      const navMain = document.querySelector(".navbar-main");
 
       function toggleNav() {
         if (window.scrollY > 32 && window.innerWidth >= 768) {
-          header.classList.add("grid-reset");
           logo.classList.add("logo-padding");
           logo.classList.add("visible");
-          nav.classList.add("invisible");
+          navTop.classList.add("invisible");
+          navMain.classList.add("margin-108");
         } else {
-          header.classList.remove("grid-reset");
           logo.classList.remove("logo-padding");
           logo.classList.remove("visible");
-          nav.classList.remove("invisible");
+          navTop.classList.remove("invisible");
+          navMain.classList.remove("margin-108");
+        }
+
+        if (window.scrollY > 32 && window.innerWidth >= 1024) {
+          logoText.classList.add("move-in");
+        } else {
+          logoText.classList.remove("move-in");
         }
       }
 
