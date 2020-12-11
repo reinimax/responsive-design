@@ -1180,5 +1180,28 @@
         >
       </div>
     </footer>
+    <script>
+      const header = document.querySelector(".site-header");
+      const logo = document.querySelector(".site-logo");
+      const logoStandard = document.querySelector(".logo-standard");
+      const logoPopdown = document.querySelector(".logo-popdown");
+      const nav = document.querySelector(".navbar-top");
+
+      function toggleNav() {
+        if (window.scrollY > 32 && window.innerWidth >= 768) {
+          header.classList.add("grid-reset");
+          logo.classList.add("logo-padding");
+          logo.classList.add("visible");
+          nav.classList.add("invisible");
+        } else {
+          header.classList.remove("grid-reset");
+          logo.classList.remove("logo-padding");
+          logo.classList.remove("visible");
+          nav.classList.remove("invisible");
+        }
+      }
+
+      window.addEventListener("scroll", toggleNav);
+    </script>
   </body>
 </html>

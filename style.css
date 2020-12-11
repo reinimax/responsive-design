@@ -66,12 +66,22 @@ h2 > a:hover {
 .site-header {
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
   z-index: 1;
   display: grid;
+  grid-template-columns: auto 1fr;
 }
 
-.site-logo,
+.site-logo {
+  background-color: black;
+  align-items: center;
+  padding: 6px 24px;
+  font-size: 24px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
 .navbar-top {
   display: none;
 }
@@ -83,6 +93,7 @@ h2 > a:hover {
 
 .navbar-main {
   height: 48px;
+  width: 100%;
   background-color: white;
 }
 
@@ -610,18 +621,13 @@ h2 > a:hover {
     grid-template-rows: auto auto;
   }
 
-  .site-logo,
   .navbar-top {
     display: flex;
   }
 
   .site-logo {
     grid-row: 1 / -1;
-    background-color: black;
-    align-items: center;
-    padding: 20px;
-    font-size: 24px;
-    font-weight: 900;
+    padding: 20px 24px;
   }
 
   .news-big,
@@ -798,4 +804,23 @@ h2 > a:hover {
     font-weight: 700;
     font-size: 15px;
   }
+}
+
+/* Classes to work with JS */
+.invisible {
+  display: none !important;
+}
+
+.visible {
+  display: block !important;
+}
+
+.grid-reset {
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto;
+}
+
+.logo-padding {
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
