@@ -84,17 +84,88 @@ h2 > a:hover {
 
 .navbar-top {
   display: none;
+  height: 32px;
+  padding: 0 20px;
+  background-color: black;
+  color: hsla(0, 0%, 100%, 0.6);
+  line-height: 32px;
+  font-size: 13px;
 }
 
-.navbar-top {
-  height: 32px;
-  background-color: black;
+.navbar-top a {
+  margin-left: 10px;
+  letter-spacing: -0.08em;
+}
+
+.navbar-top a.link-highlight {
+  color: white;
+}
+
+.navbar-top a:first-child {
+  margin-left: 0;
+}
+
+.navbar-top a:hover {
+  color: white;
+}
+
+.company {
+  text-align: right;
 }
 
 .navbar-main {
   height: 48px;
   width: 100%;
   background-color: white;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-main a {
+  color: rgb(170, 170, 170);
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  height: 48px;
+  line-height: 1;
+  padding: 18px 12px 0;
+}
+
+.navbar-main a:first-child {
+  padding-left: 20px;
+}
+
+.navbar-main a:hover {
+  color: black;
+}
+
+.navbar-main button {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-left: 1px solid rgb(235, 235, 235);
+  background-color: white;
+  cursor: pointer;
+}
+
+.navbar-main .search {
+  max-height: 100%;
+  padding: 16px 16px 16px 15px;
+  float: left;
+}
+
+.navbar-main .mobile-menu span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 4px;
+  background-color: var(--orange);
+  border-radius: 30%;
+}
+
+.navbar-main .expanded-menu {
+  display: none;
 }
 
 /* Big News section*/
@@ -623,11 +694,24 @@ h2 > a:hover {
 
   .navbar-top {
     display: flex;
+    justify-content: space-between;
   }
 
   .site-logo {
     grid-row: 1 / -1;
     padding: 20px 24px;
+  }
+
+  .navbar-main {
+    justify-content: space-between;
+  }
+
+  .navbar-main .mobile-menu {
+    display: none;
+  }
+
+  .navbar-main .expanded-menu {
+    display: block;
   }
 
   .news-big,
