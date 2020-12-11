@@ -294,6 +294,10 @@ h2 > a:hover {
   padding: 20px;
 }
 
+.funding > article:last-child {
+  display: none;
+}
+
 .funding h2 {
   margin-bottom: 10px;
 }
@@ -883,6 +887,10 @@ h2 > a:hover {
   .funding h3 {
     font-size: 17px;
     font-weight: 700;
+  }
+
+  .funding > article:last-child {
+    display: block;
   }
 
   .deals h3 {
